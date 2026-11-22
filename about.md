@@ -14,4 +14,4 @@ I'm moving into tech, focused on QA, verification and clear documentation.
 ## Contact
 
 <!-- Only the channels you're comfortable being public. -->
-[LinkedIn](https://www.linkedin.com/in/YOUR-PROFILE/)
+[LinkedIn](https://www.linkedin.com/in/oksana-kozii/)
