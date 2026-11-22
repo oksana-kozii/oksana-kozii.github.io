@@ -13,17 +13,16 @@ tags: [ai-verification, qa-testing, ux, accessibility]
 - **How:** An AI assistant (Claude, by Anthropic) wrote the code; I owned the architecture and decisions, logged who drove each one (100+ entries), and verified every change on real phones.
 - **Result:** 29 cards in three languages, a fifth of the original file size, WCAG AA contrast, and bugs caught that neither the AI nor my own eye spotted at first.
 
-  <video class="demo-video" controls muted playsinline preload="metadata">
-  <source src="/assets/video/nekudot/nekudot_demo.mp4" type="video/mp4">
-</video>
-<p class="caption">Revealing an answer, moving to the next card, and filtering by group.</p>
-
- <div class="gallery">
+<div class="gallery">
   <a href="/assets/img/nekudot/Screenshot_20261122_102347_Firefox.jpg"><img src="/assets/img/nekudot/Screenshot_20261122_102347_Firefox.jpg" alt="DESCRIBE THIS SCREENSHOT"></a>
   <a href="/assets/img/nekudot/Screenshot_20261122_102339_Firefox.jpg"><img src="/assets/img/nekudot/Screenshot_20261122_102339_Firefox.jpg" alt="DESCRIBE THIS SCREENSHOT"></a>
   <a href="/assets/img/nekudot/Screenshot_20261122_102428_Firefox.jpg"><img src="/assets/img/nekudot/Screenshot_20261122_102428_Firefox.jpg" alt="DESCRIBE THIS SCREENSHOT"></a>
   <a href="/assets/img/nekudot/Screenshot_20261122_102422_Firefox.jpg"><img src="/assets/img/nekudot/Screenshot_20261122_102422_Firefox.jpg" alt="DESCRIBE THIS SCREENSHOT"></a>
+  <video controls muted playsinline preload="metadata">
+    <source src="/assets/video/nekudot/nekudot-demo.mp4" type="video/mp4">
+  </video>
 </div>
+<p class="caption">Four screens of the app, and a short clip of revealing an answer, moving on and filtering.</p>
 
 ---
 
