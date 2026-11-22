@@ -1,0 +1,37 @@
+# ---- Site identity (edit these) ----
+title: Your Name
+description: Moving into tech — QA, verification, and clear documentation.
+lang: en-US
+
+# ---- Theme ----
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# ---- Content sections ----
+# Each section is a folder starting with "_". Every .md file inside becomes a page.
+collections:
+  work:
+    output: true
+    permalink: /work/:name/
+  writing:
+    output: true
+    permalink: /writing/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope: { path: "", type: work }
+    values: { layout: entry }
+  - scope: { path: "", type: writing }
+    values: { layout: entry }
+  - scope: { path: "", type: notes }
+    values: { layout: entry }
+
+# Files that should never be published to the site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

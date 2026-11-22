@@ -1,0 +1,7 @@
+# One block per project. These become the cards on the Work page.
+# Leave a field empty ("") if it doesn't exist yet.
+- name: Hebrew Vowels Trainer
+  summary: Phone flashcards for Hebrew vowel marks, rebuilt and checked card by card against a standard chart.
+  demo: https://YOUR-USERNAME.github.io/hebrew-vowels-trainer/
+  repo: https://github.com/YOUR-USERNAME/hebrew-vowels-trainer
+  case_study: /work/nekudot-rebuild/

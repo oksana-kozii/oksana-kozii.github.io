@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+        <p>{{ site.description }}</p>
+
+        <!-- Main menu. "Writing" appears automatically once the first post exists. -->
+        <nav class="site-nav">
+          <ul>
+            <li><a href="{{ "/work/" | relative_url }}"{% if page.url contains "/work/" %} class="active"{% endif %}>Work</a></li>
+            {% if site.writing.size > 0 %}
+            <li><a href="{{ "/writing/" | relative_url }}"{% if page.url contains "/writing/" %} class="active"{% endif %}>Writing</a></li>
+            {% endif %}
+            <li><a href="{{ "/notes/" | relative_url }}"{% if page.url contains "/notes/" %} class="active"{% endif %}>Notes</a></li>
+            <li><a href="{{ "/about/" | relative_url }}"{% if page.url contains "/about/" %} class="active"{% endif %}>About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+      {{ content }}
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+  </body>
+</html>
