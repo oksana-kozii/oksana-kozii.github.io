@@ -7,7 +7,9 @@ permalink: /about/
 # About
 
 <!-- One line: who you are and what you're moving toward. -->
-I'm moving into tech, focused on QA, verification and clear documentation.
+**Find the cause. Verify the fix. Explain it clearly.**
+
+I'm moving into IT support and AI quality work. This site is where I show the work: what I built, what broke, and how I checked it.
 
 <!-- Two or three short sentences on what you do and how you work. -->
 
