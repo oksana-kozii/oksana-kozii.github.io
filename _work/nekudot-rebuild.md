@@ -19,7 +19,7 @@ tags: [ai-verification, qa-testing, ux, accessibility]
   <a href="/assets/img/nekudot/Screenshot_20261122_102428_Firefox.jpg"><img src="/assets/img/nekudot/Screenshot_20261122_102428_Firefox.jpg" alt="DESCRIBE THIS SCREENSHOT"></a>
   <a href="/assets/img/nekudot/Screenshot_20261122_102422_Firefox.jpg"><img src="/assets/img/nekudot/Screenshot_20261122_102422_Firefox.jpg" alt="DESCRIBE THIS SCREENSHOT"></a>
   <video controls muted playsinline preload="metadata">
-    <source src="/assets/video/nekudot/nekudot-demo.mp4" type="video/mp4">
+    <source src="/assets/video/nekudot/nekudot_demo.mp4" type="video/mp4">
   </video>
 </div>
 <p class="caption">Four screens of the app, and a short clip of revealing an answer, moving on and filtering.</p>
