@@ -26,11 +26,11 @@
   .site-nav ul { display: flex; gap: 16px; flex-wrap: wrap; }
   .site-nav a.active { border-left: none; padding-left: 0; text-decoration: underline; }
 }
-.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0; }
-.gallery img { width: 100%; height: auto; border: 1px solid #e5e5e5; border-radius: 6px; }
+.gallery { display: flex; gap: 10px; margin: 20px 0 6px; align-items: flex-start; }
+.gallery > * { flex: 1 1 0; min-width: 0; }
+.gallery img, .gallery video { display: block; width: 100%; height: auto; border: 1px solid #e5e5e5; border-radius: 6px; }
 
 @media (max-width: 480px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery { flex-wrap: wrap; }
+  .gallery > * { flex: 1 1 45%; }
 }
-.demo-video { display: block; max-width: 320px; width: 100%; margin: 20px auto 6px; border: 1px solid #e5e5e5; border-radius: 6px; }
-.caption { text-align: center; color: #777; font-size: 0.9em; }
