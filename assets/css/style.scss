@@ -60,3 +60,19 @@
 .replay:hover, .replay:focus-visible { background: rgba(0, 0, 0, 0.85); outline: 2px solid #fff; }
 .replay svg { width: 30px; height: 30px; fill: #fff; }
 .replay[hidden] { display: none; }
+
+/* ===== FONT: iA Writer Quattro — delete from here to END FONT to roll back ===== */
+@font-face { font-family: "iA Writer Quattro"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("../fonts/ia-writer-quattro/iAWriterQuattroS-Regular.woff2") format("woff2"); }
+@font-face { font-family: "iA Writer Quattro"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("../fonts/ia-writer-quattro/iAWriterQuattroS-Bold.woff2") format("woff2"); }
+@font-face { font-family: "iA Writer Quattro"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("../fonts/ia-writer-quattro/iAWriterQuattroS-Italic.woff2") format("woff2"); }
+@font-face { font-family: "iA Writer Quattro"; font-weight: 700; font-style: italic; font-display: swap;
+  src: url("../fonts/ia-writer-quattro/iAWriterQuattroS-BoldItalic.woff2") format("woff2"); }
+
+body {
+  font-family: "iA Writer Quattro", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+/* ===== END FONT ===== */
