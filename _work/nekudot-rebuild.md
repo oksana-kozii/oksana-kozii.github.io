@@ -4,6 +4,26 @@ summary: "A trilingual flashcard app for Hebrew vowel points, rebuilt with an AI
 date: 2026-11-22
 featured: true
 tags: [ai-verification, qa-testing, ux, accessibility]
+gallery:
+  video: /assets/video/nekudot/nekudot_demo.mp4
+  video_label: Nekudot demo video
+  images:
+    - src: /assets/img/nekudot/1_redused%20segol_card_eng.png
+      alt: "English interface, question side: card 21 shows the reduced segol mark under an empty letter box."
+    - src: /assets/img/nekudot/2_redused%20segol_card%20revealed_eng.png
+      alt: "Same card with the answer revealed: Reduced segol, sound e."
+    - src: /assets/img/nekudot/3_kubutz_card_eng.png
+      alt: "English interface, question side: card 22 shows the kubutz mark, three slanted dots."
+    - src: /assets/img/nekudot/4_kubutz_card%20revealed_eng.png
+      alt: "Same card with the answer revealed: Kubutz, sound u."
+    - src: /assets/img/nekudot/5_kubutz_card_ukr.png
+      alt: "Ukrainian interface, question side: kubutz card."
+    - src: /assets/img/nekudot/6_kubutz_card%20revealed_ukr.png
+      alt: "Ukrainian interface, kubutz card with the answer revealed."
+    - src: /assets/img/nekudot/7_kubutz_card_ru.png
+      alt: "Russian interface, question side: kubutz card."
+    - src: /assets/img/nekudot/8_kubutz_card%20revealed_ru.png
+      alt: "Russian interface, kubutz card with the answer revealed."
 ---
 
 **A multilingual flashcard app for learning Hebrew *nikud* (the vowel points), rebuilt from the ground up — and documented as I built it, decision by decision, with an honest record of what I drove and what I learned.**
