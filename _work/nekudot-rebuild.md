@@ -9,7 +9,7 @@ gallery:
   video_label: Nekudot demo video
   images:
     - src: /assets/img/nekudot/1_redused%20segol_card_eng.png
-      alt: ""English interface, question side: card 21 shows the reduced segol mark under an empty letter box."
+      alt: "English interface, question side: card 21 shows the reduced segol mark under an empty letter box."
     - src: /assets/img/nekudot/2_redused%20segol_card%20revealed_eng.png
       alt: "Same card with the answer revealed: Reduced segol, sound e."
     - src: /assets/img/nekudot/3_kubutz_card_eng.png
