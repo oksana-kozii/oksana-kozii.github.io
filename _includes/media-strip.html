@@ -91,6 +91,7 @@
 .mlb-bar { display: flex; align-items: center; gap: 10px; width: min(420px, 90vw); height: 40px;
   margin-top: 8px; color: #eee; font-size: 14px; }
 .mlb-bar.off { visibility: hidden; } /* keeps the same space for screenshots, so nothing jumps */
+.mlb .mlb-bar button[hidden] { display: none; }
 .mlb .mlb-bar button { position: static; flex: 0 0 auto; width: 40px; height: 40px; font-size: 18px; line-height: 40px; padding: 0; }
 .mlb-seek { flex: 1 1 auto; min-width: 0; height: 32px; margin: 0; accent-color: #fff; cursor: pointer; touch-action: none; }
 .mlb-time { flex: 0 0 auto; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -146,7 +147,7 @@
         '<button type="button" class="mlb-pp" aria-label="Play">&#9654;</button>' +
         '<input type="range" class="mlb-seek" min="0" max="1000" step="1" value="0" aria-label="Video position">' +
         '<span class="mlb-time">0:00 / 0:00</span>' +
-        '<button type="button" class="mlb-mute" aria-label="Mute">&#128266;</button>';
+        '<button type="button" class="mlb-mute" aria-label="Mute" hidden>&#128266;</button>';
       var pp = bar.querySelector('.mlb-pp'), seek = bar.querySelector('.mlb-seek'),
           time = bar.querySelector('.mlb-time'), mute = bar.querySelector('.mlb-mute'), dragging = false;
       var fmt = function (s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); };
@@ -162,8 +163,13 @@
       el.addEventListener('play', function () { replay.hidden = true; pp.innerHTML = '&#10074;&#10074;'; pp.setAttribute('aria-label', 'Pause'); });
       el.addEventListener('pause', function () { pp.innerHTML = '&#9654;'; pp.setAttribute('aria-label', 'Play'); });
       el.addEventListener('ended', function () { replay.hidden = false; replay.focus(); });
-      el.addEventListener('timeupdate', paint);
-      el.addEventListener('loadedmetadata', paint);
+      // Show the sound button only if the video actually has a sound track
+      var checkAudio = function () {
+        if (!mute.hidden) return;
+        if (el.mozHasAudio || (el.audioTracks && el.audioTracks.length > 0) || el.webkitAudioDecodedByteCount > 0) mute.hidden = false;
+      };
+      el.addEventListener('timeupdate', function () { paint(); checkAudio(); });
+      el.addEventListener('loadedmetadata', function () { paint(); checkAudio(); });
       seek.addEventListener('input', function () {
         dragging = true;
         if (isFinite(el.duration)) { el.currentTime = seek.value / 1000 * el.duration; time.textContent = fmt(el.currentTime) + ' / ' + fmt(el.duration); }
