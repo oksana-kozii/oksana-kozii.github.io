@@ -9,7 +9,7 @@ gallery:
   video_label: Nekudot demo video
   images:
     - src: /assets/img/nekudot/1_redused%20segol_card_eng.png
-      alt: "English interface, question side: card 21 shows the reduced segol mark under an empty letter box."
+      alt: ""English interface, question side: card 21 shows the reduced segol mark under an empty letter box."
     - src: /assets/img/nekudot/2_redused%20segol_card%20revealed_eng.png
       alt: "Same card with the answer revealed: Reduced segol, sound e."
     - src: /assets/img/nekudot/3_kubutz_card_eng.png
@@ -19,11 +19,11 @@ gallery:
     - src: /assets/img/nekudot/5_kubutz_card_ukr.png
       alt: "Ukrainian interface, question side: kubutz card."
     - src: /assets/img/nekudot/6_kubutz_card%20revealed_ukr.png
-      alt: "Ukrainian interface, kubutz card with the answer revealed."
+      alt: "Ukrainian interface, kubutz card with the answer revealed: кубуц, sound у."
     - src: /assets/img/nekudot/7_kubutz_card_ru.png
       alt: "Russian interface, question side: kubutz card."
     - src: /assets/img/nekudot/8_kubutz_card%20revealed_ru.png
-      alt: "Russian interface, kubutz card with the answer revealed."
+      alt: "Russian interface, kubutz card with the answer revealed: куббуц, sound у."
 ---
 
 **A multilingual flashcard app for learning Hebrew *nikud* (the vowel points), rebuilt from the ground up — and documented as I built it, decision by decision, with an honest record of what I drove and what I learned.**
@@ -32,23 +32,8 @@ gallery:
 - **What:** I rebuilt my own Hebrew vowel-points flashcard app as a trilingual, data-driven web app designed for older, low-vision learners.
 - **How:** An AI assistant (Claude, by Anthropic) wrote the code; I owned the architecture and decisions, logged who drove each one (100+ entries), and verified every change on real phones.
 - **Result:** 29 cards in three languages, a fifth of the original file size, WCAG AA contrast, and bugs caught that neither the AI nor my own eye spotted at first.
-
-<div class="gallery">
-  <a href="/assets/img/nekudot/1_redused%20segol_card_eng.png"><img src="/assets/img/nekudot/1_redused%20segol_card_eng.png" alt="English interface, question side: card 21 shows the reduced segol mark under an empty letter box."></a>
-  <a href="/assets/img/nekudot/2_redused%20segol_card%20revealed_eng.png"><img src="/assets/img/nekudot/2_redused%20segol_card%20revealed_eng.png" alt="Same card with the answer revealed: Reduced segol, sound e."></a>
-  <a href="/assets/img/nekudot/3_kubutz_card_eng.png"><img src="/assets/img/nekudot/3_kubutz_card_eng.png" alt="English interface, question side: card 22 shows the kubutz mark, three slanted dots."></a>
-  <a href="/assets/img/nekudot/4_kubutz_card%20revealed_eng.png"><img src="/assets/img/nekudot/4_kubutz_card%20revealed_eng.png" alt="Same card with the answer revealed: Kubutz, sound u."></a>
-</div>
-<div class="gallery">
-  <a href="/assets/img/nekudot/5_kubutz_card_ukr.png"><img src="/assets/img/nekudot/5_kubutz_card_ukr.png" alt="Ukrainian interface, question side: the kubutz card."></a>
-  <a href="/assets/img/nekudot/6_kubutz_card%20revealed_ukr.png"><img src="/assets/img/nekudot/6_kubutz_card%20revealed_ukr.png" alt="Ukrainian interface, answer revealed: кубуц, sound у."></a>
-  <a href="/assets/img/nekudot/7_kubutz_card_ru.png"><img src="/assets/img/nekudot/7_kubutz_card_ru.png" alt="Russian interface, question side: the kubutz card."></a>
-  <a href="/assets/img/nekudot/8_kubutz_card%20revealed_ru.png"><img src="/assets/img/nekudot/8_kubutz_card%20revealed_ru.png" alt="Russian interface, answer revealed: куббуц, sound у."></a>
-  <video controls muted playsinline preload="metadata">
-    <source src="/assets/video/nekudot/nekudot_demo.mp4" type="video/mp4">
-  </video>
-</div>
-<p class="caption">Two cards in English, question and answer; the same card in Ukrainian and Russian; and a short clip of revealing an answer, moving on and filtering.</p>
+  
+{% include media-strip.html gallery=page.gallery %}
 
 ---
 
