@@ -75,8 +75,23 @@
 .mlb { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,.92); display: none;
   align-items: center; justify-content: center; }
 .mlb.open { display: flex; }
-.mlb-stage { max-width: 92vw; max-height: 86vh; display: flex; }
-.mlb-stage img, .mlb-stage video { max-width: 92vw; max-height: 86vh; border-radius: 8px; display: block; }
+.mlb-stage { max-width: 80vw; display: flex; flex-direction: column; align-items: center; }
+.mlb-media { position: relative; line-height: 0; }
+.mlb-stage img, .mlb-stage video { width: auto !important; height: auto !important;
+  max-width: 80vw; max-height: 74vh; border-radius: 8px; display: block; margin: 0; }
+.mlb-caption { color: #eee; font-size: 16px; line-height: 1.45; text-align: center;
+  max-width: 640px; margin-top: 12px; }
+.mlb-caption:empty { display: none; }
+.mlb .mlb-replay { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: auto; height: auto; padding: 12px 22px; border-radius: 28px; font-size: 18px; line-height: 1.2;
+  background: rgba(0,0,0,.7); box-shadow: 0 2px 10px rgba(0,0,0,.5); white-space: nowrap; }
+.mlb .mlb-replay:hover { background: rgba(0,0,0,.85); }
+.mlb .mlb-replay[hidden] { display: none; }
+@media (max-width: 600px) {
+  .mlb-stage { max-width: 100vw; padding: 0 8px; }
+  .mlb-stage img, .mlb-stage video { max-width: 96vw; max-height: 68vh; }
+  .mlb-prev, .mlb-next { top: auto !important; bottom: 8px; }
+}
 .mlb button { position: absolute; border: 0; background: rgba(255,255,255,.12); color: #fff;
   border-radius: 50%; width: 48px; height: 48px; font-size: 28px; line-height: 44px; cursor: pointer; }
 .mlb button:hover { background: rgba(255,255,255,.25); }
@@ -106,15 +121,29 @@
     idx = (i + items.length) % items.length;
     var it = items[idx];
     stage.innerHTML = '';
+    var box = document.createElement('div'); box.className = 'mlb-media';
     var el;
     if (it.dataset.type === 'video') {
       el = document.createElement('video');
       el.src = it.dataset.src; el.controls = true; el.autoplay = true; el.playsInline = true;
+      var replay = document.createElement('button');
+      replay.type = 'button'; replay.className = 'mlb-replay'; replay.hidden = true;
+      replay.innerHTML = '&#8635; Replay';
+      replay.onclick = function () { el.currentTime = 0; el.play(); };
+      el.addEventListener('ended', function () { replay.hidden = false; replay.focus(); });
+      el.addEventListener('play', function () { replay.hidden = true; });
+      box.appendChild(el); box.appendChild(replay);
     } else {
       el = document.createElement('img');
       el.src = it.dataset.src; el.alt = it.dataset.alt || '';
+      box.appendChild(el);
     }
-    stage.appendChild(el);
+    stage.appendChild(box);
+    var cap = document.createElement('p');
+    cap.className = 'mlb-caption';
+    if (it.dataset.type !== 'video') cap.setAttribute('aria-hidden', 'true'); // screen readers already get the image's alt
+    cap.textContent = it.dataset.alt || '';
+    stage.appendChild(cap);
     count.textContent = (idx + 1) + ' / ' + items.length;
   }
   function open(list, i, btn) {
